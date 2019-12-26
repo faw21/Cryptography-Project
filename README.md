@@ -61,6 +61,11 @@ Since file servers are untrusted, files may be leaked from the server to unautho
 
 A file server may “steal” the token used by one of its clients and attempt to pass it off to another user. This project ensures that any stolen tokens are usable only on the server at which the theft took place (and are thus effectively useless, as this rogue file server could simply allow access without checking the token).
 
+### Mechanism ###
+For mechanism used for T1-T4, click [write-up for these Threats](https://github.com/faw21/Cryptography-Project/blob/master/doc/Phase3-Writeup.html)
+
+For mechanism used for T5-T7, click [write-up for these Threats](https://github.com/faw21/Cryptography-Project/blob/master/doc/Phase4-Writeup.html)
+
 ### Compile and Usage ###
 Once inside src/ folder,
 
