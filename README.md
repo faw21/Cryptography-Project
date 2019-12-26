@@ -33,31 +33,31 @@ The clients are assumed to be not trustworthy. Specifically, clients may attempt
 Assume that all communications in the system might be intercepted by an *active attacker* that can insert, reorder, replay, or modify messages.
 
 ###### Threat Model
-- Unauthorized Token Issurance
+- T1. Unauthorized Token Issurance
 
 All clients are authenticated in a secure manner prior to issuing them tokens.
 
-- Token Modification/Forgery
+- T2. Token Modification/Forgery
 
 Allow file servers (or anyone else) to determine whether a token is in fact valid and unmodified
 
-- Unauthorized File Server
+- T3. Unauthorized File Server
 
 If a user attempts to contact some server, *s*, then they actually connect to *s* and not some other server *s'*.
 
-- Information Leakage via Passive Monitoring
+- T4. Information Leakage via Passive Monitoring
 
 All communications between the client and server applications are hidden from outside observers. This will ensure that file contents remain private, and that tokens cannot be stolen in transit.
 
-- Message Reorder, Replay, or Modification
+- T5. Message Reorder, Replay, or Modification
 
 After connecting to a properly authenticated group server or file server, the messages sent between the user and the server might be reordered, saved for later replay, or otherwise modified by an active attacker. Users and servers have a means to detect message tampering, reordering, or replay. Upon detecting one of these exceptional conditions, it is permissible to terminate the client/server connection
 
-- File Leakage
+- T6. File Leakage
 
 Since file servers are untrusted, files may be leaked from the server to unauthorized principals. Thus, files leaked from the server are only readable by members of the appropriate group.
 
-- Token Theft
+- T7. Token Theft
 
 A file server may “steal” the token used by one of its clients and attempt to pass it off to another user. This project ensures that any stolen tokens are usable only on the server at which the theft took place (and are thus effectively useless, as this rogue file server could simply allow access without checking the token).
 
