@@ -6,14 +6,16 @@
 ### Compile and Usage ###
 Once inside src/ folder,
 
-**COMPILE:** 
+###### COMPILE:
 ```
 javac -cp path/to/bouncy/castle/jar *.java
 ```
-===
-**USAGE:**
 
-**To start Group Server:**
+
+
+###### USAGE:
+
+***To start Group Server:***
  ```
  java -cp .:/path/to/BC/jar RunGroupServer [(optional) port number]
  ```
@@ -25,7 +27,7 @@ javac -cp path/to/bouncy/castle/jar *.java
  run on port 8765, but a custom port can be passed as the first command line
  argument.
 
-**To start the File Server:**
+***To start the File Server:***
 
  Ensure the Group Server public key is in the same directory as the stored File server
  
@@ -45,7 +47,7 @@ javac -cp path/to/bouncy/castle/jar *.java
 
  Note that this implementation supports server side directories.
 
-**User Interface**
+***User Interface***
 
  Ensure the Group Server and File server Public keys are stored in the working directory of the ClientApp
 
