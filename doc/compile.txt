@@ -1,0 +1,2 @@
+Once inside src/ folder,
+COMPILE: javac -cp path/to/bouncy/castle/jar *.java 
