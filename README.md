@@ -5,7 +5,7 @@
 
 ### Compile and Usage ###
 Once inside src/ folder,
- - COMPILE: 
+**COMPILE: 
 ```
 javac -cp path/to/bouncy/castle/jar *.java
 ```
